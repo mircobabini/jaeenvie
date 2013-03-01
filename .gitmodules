@@ -1,3 +1,3 @@
-[submodule "vendor/apple2js"]
-	path = vendor/apple2js
+[submodule "archs/apple2js"]
+	path = archs/apple2js
 	url = git://github.com/mirkolofio/apple2js
