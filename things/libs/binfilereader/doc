@@ -1,0 +1,20 @@
+getFileSize()	Return the file size
+getFilePointer()	Return the reading position
+movePointerTo(iTo)	Move the reading position to iTo.
+movePointer(iDirection)	Move the reading position in iDirection.
+For all the following read functions,
+- The reading position will move to the end of where the content is last read
+- When iFrom is ommited, current reading position is used
+readNumber(iNumBytes, iFrom)	Read and return iNumBytes-byte number starting at iFrom.
+readString(iNumChars, iFrom)	Read and return iNumChars characters starting at iFrom.
+readUnicodeString(iNumChars, iFrom)	Read and return iNumChars unicoded characters starting at iFrom.
+ 
+* Example:
+var bmpFile = new BinFileReader(“image.bmp”);
+bmpFile.movePointerTo(18);
+var width = bmpFile.readNumber(4);
+var height = bmpFile.readNumber(4);
+ 
+* Demo:
+http://www.heypage.com/nagoon97/BinFileReader/BinFileReader_demo.html
+http://www.heypage.com/nagoon97/BinFileReader/MosaicBuilder_demo.html
